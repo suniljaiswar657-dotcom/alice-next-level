@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#090b10">
+<meta name="description" content="Alice Next Level — local-first memory notebook.">
+<title>Alice Next Level — Memory</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="shell">
+<header class="topbar"><div class="brand">A</div><div><p class="eyebrow">PERSONAL AI WORKSPACE</p><h1>Alice <span>Next Level</span></h1></div><span class="local"><i></i> Local</span></header>
+<section class="hero"><p class="eyebrow">VERSION 0.1</p><h2>Memory that stays <span>in your hands.</span></h2><p class="muted">Save useful context, search it later, and keep your notes organised. This starter version stores data only in this browser.</p></section>
+<aside class="notice"><strong>Local-first storage</strong><p>Your memories stay in this browser on this device and do not sync automatically. Export a backup before clearing browser data.</p></aside>
+<section class="panel"><div class="heading"><div><p class="eyebrow">MEMORY VAULT</p><h2>Your memories</h2></div><span id="count" class="muted">0 saved</span></div>
+<form id="memory-form"><input id="memory-id" type="hidden"><label for="title">Title</label><input id="title" maxlength="120" placeholder="e.g. Project rule" required><label for="content">Memory details</label><textarea id="content" rows="4" maxlength="6000" placeholder="Write useful context you want to find later…" required></textarea><label for="tags">Tags <small>(comma-separated)</small></label><input id="tags" maxlength="240" placeholder="project, preference, learning"><div class="actions"><button class="primary" id="save" type="submit">Save memory</button><button class="secondary hidden" id="cancel" type="button">Cancel edit</button></div><p id="status" role="status" class="status"></p></form>
+<div class="search"><span aria-hidden="true">⌕</span><label class="sr-only" for="search">Search memories</label><input id="search" type="search" placeholder="Search title, details, or tags…"></div>
+<div class="actions backup"><button class="secondary" id="export" type="button">Export backup</button><button class="secondary" id="import" type="button">Import backup</button><input id="file" class="hidden" type="file" accept="application/json,.json"></div>
+<div id="list" class="list"></div><p id="empty" class="empty">No memories yet. Add one above to start your vault.</p>
+</section><footer><p>ALICE NEXT LEVEL · Built for clarity, control, and verified progress.</p><p>Do not store passwords, API keys, or highly sensitive information here.</p></footer>
+</main><script src="app.js"></script></body></html>
